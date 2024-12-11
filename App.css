@@ -1,0 +1,88 @@
+/* Global Reset and Box-Sizing */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background Gradient */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #004080 0%, #0077cc 100%);
+  color: #333;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+/* Main app container */
+div {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styles */
+h1 {
+  font-size: 2.5rem;
+  color: #004080;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Button styles */
+button {
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #0077cc;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #004080;
+  transform: scale(1.05);
+}
+
+/* WebSocket Connection (Status) */
+.websocket-status {
+  font-size: 1.2rem;
+  color: #ffa500;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  div {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .ticket-display, .log-display {
+    padding: 15px;
+  }
+
+  .control-panel {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .control-panel button {
+    width: 100%;
+  }
+}

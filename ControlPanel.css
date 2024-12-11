@@ -1,0 +1,36 @@
+.control-panel {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.control-panel button {
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.control-panel .start-button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.control-panel .start-button:hover {
+    background-color: #0056b3;
+}
+
+.control-panel .stop-button {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.control-panel .stop-button:hover {
+    background-color: #c82333;
+}
+
