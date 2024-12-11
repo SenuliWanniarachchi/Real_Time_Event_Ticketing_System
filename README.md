@@ -1,70 +1,123 @@
-# Getting Started with Create React App
+# Real-Time Event Ticketing System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+The Real-Time Event Ticketing System is a comprehensive solution designed to manage event ticketing with high efficiency. The system consists of three major components:
 
-In the project directory, you can run:
+- **CLI Application (Java)**: Implements core functionality using the Producer-Consumer pattern to handle concurrent ticket releases and purchases.
+- **Frontend (React)**: Provides a user-friendly interface for managing tickets, customers, vendors, and system configurations.
+- **Backend (Spring Boot)**: Handles API requests, data persistence, and business logic.
 
-### `npm start`
+This project showcases the integration of modern technologies to deliver a seamless ticketing experience.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Setup Instructions
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ensure the following software and tools are installed:
 
-### `npm run build`
+- **Java**: Version 11 or later
+- **Node.js**: Version 16 or later
+- **npm**: Included with Node.js installation
+- **Spring Boot**: Included in the project setup
+- **Git**: For version control
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Clone the Repository
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/yourusername/real-time-event-ticketing-system.git
+cd real-time-event-ticketing-system
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Backend (Spring Boot)
 
-### `npm run eject`
+1. Navigate to the backend directory:
+   ```bash
+   cd backend
+   ```
+2. Build the application using Maven:
+   ```bash
+   mvn clean install
+   ```
+3. Run the application:
+   ```bash
+   mvn spring-boot:run
+   ```
+   The backend will start at `http://localhost:8080` by default.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Frontend (React)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Navigate to the frontend directory:
+   ```bash
+   cd frontend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the React development server:
+   ```bash
+   npm start
+   ```
+   The frontend will start at `http://localhost:3000` by default.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### CLI Application (Java)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Navigate to the CLI directory:
+   ```bash
+   cd cli
+   ```
+2. Compile and run the CLI application:
+   ```bash
+   javac -d bin src/*.java
+   java -cp bin Main
+   ```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Usage Instructions
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Configuring and Starting the System
 
-### Code Splitting
+1. **Configuration**:
+   - Use the **ConfigurationForm** component in the React frontend to set system parameters, such as `totalTickets`, `releaseRate`, `retrievalRate`, and `maxCapacity`.
+   - Submit the form to save the configuration.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. **Starting the System**:
+   - Navigate to the **Control Panel** in the React UI.
+   - Click the "Start System" button to begin ticketing operations. The system state will be updated to "Running."
 
-### Analyzing the Bundle Size
+### UI Controls
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. **Configuration Form**:
+   - Set system parameters and submit.
+   - Displays success or error messages based on validation results.
 
-### Making a Progressive Web App
+2. **Control Panel**:
+   - Start or stop the system.
+   - Displays current system status.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. **Customer and Vendor Management**:
+   - Add or remove customers/vendors using the respective buttons.
+   - Displays logs for actions taken.
 
-### Advanced Configuration
+4. **Log Display**:
+   - Automatically updates every 5 seconds.
+   - Shows system events and actions with timestamps.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+5. **Ticket Display**:
+   - Shows the remaining ticket count in real-time.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contributions
 
-### `npm run build` fails to minify
+Contributions are welcome! Please fork the repository, make changes, and create a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+---
+
+Feel free to contact (mailto:senulijayodya@gmail.com) for any questions or issues.
+
